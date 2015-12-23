@@ -1,0 +1,18 @@
+pcm.DAC {
+   type hw
+   card 1
+   device 0
+}
+
+ctl.!default {
+   type hw
+   card "hw:1,0"
+}
+
+pcm.!default {
+   type plug
+   slave {
+      pcm "DAC"
+      rate "unchanged"
+   }
+}
