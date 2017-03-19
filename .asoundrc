@@ -1,12 +1,12 @@
 pcm.DAC {
    type hw
-   card 1
+   card 3
    device 0
 }
 
 ctl.!default {
    type hw
-   card "hw:1,0"
+   card "hw:3,0"
 }
 
 pcm.!default {
@@ -14,5 +14,6 @@ pcm.!default {
    slave {
       pcm "DAC"
       rate "unchanged"
+      format S32_LE
    }
 }
